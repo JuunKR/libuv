@@ -17,6 +17,38 @@ docker-compose exec libuv-dev /bin/bash
 docker-compose down
 ```
 
+## Build Documentation
+
+### Setup Python Virtual Environment
+```bash
+# Create virtual environment
+python3 -m venv /workspace/.venv
+
+# Activate virtual environment
+source /workspace/.venv/bin/activate
+```
+
+### Install Dependencies and Build
+```bash
+# Install Sphinx and dependencies
+cd /workspace/docs
+pip install -r requirements.txt
+
+# Build HTML documentation
+make html
+```
+
+### View Documentation
+```bash
+# Built documentation location
+# /workspace/docs/build/html/index.html
+
+# View with web server (optional)
+cd /workspace/docs/build/html
+python3 -m http.server 8000
+# Access http://localhost:8000 in your browser
+```
+
 ## Build Instructions
 
 ### Build Example Code 
