@@ -1,0 +1,13 @@
+services:
+  libuv-dev:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: libuv-dev
+    volumes:
+      - .:/workspace
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
+    command: tail -f /dev/null
+
+
