@@ -6,6 +6,8 @@ services:
     container_name: libuv-dev
     volumes:
       - .:/workspace
+    ports:
+      - 8000:8000
     environment:
       - DEBIAN_FRONTEND=noninteractive
     command: tail -f /dev/null
