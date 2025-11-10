@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
     cmake \
     python3 \
     python3-pip \
+    libcurl4-openssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
